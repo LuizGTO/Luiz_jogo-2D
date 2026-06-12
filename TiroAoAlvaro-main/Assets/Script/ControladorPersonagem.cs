@@ -22,12 +22,12 @@ public class ControladorPersonagem : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        if (rb2d.velocity.magnitude < 5) {
-            rb2d.velocity += new Vector2(vel,0)*horizontalInput*Time.deltaTime;
+        if (rb2d.linearVelocity.magnitude < 5) {
+            rb2d.linearVelocity += new Vector2(vel,0)*horizontalInput*Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.UpArrow)&&scriptGround.taNoChao||Input.GetKey(KeyCode.Space)&&scriptGround.taNoChao) {
-            rb2d.velocity = new Vector2(rb2d.velocity.x,jump);
+            rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x,jump);
         }
     }
 }
