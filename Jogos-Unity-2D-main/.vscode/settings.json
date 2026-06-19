@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Jogos-Unity-2D.sln"
+    "dotnet.defaultSolution": "Jogos-Unity-2D-main.slnx"
 }

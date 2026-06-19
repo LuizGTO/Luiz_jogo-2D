@@ -21,13 +21,13 @@ public class PersonagemController : MonoBehaviour
 
         Vector2 movimento = new Vector2(HorizontalInput, VerticalInput);
 
-        if (rb2d.velocity.magnitude < 5)
+        if (rb2d.linearVelocity.magnitude < 5)
         {
-            rb2d.velocity += movimento * vel;
+            rb2d.linearVelocity += movimento * vel;
         }
 
         if (Input.GetKey(KeyCode.Space)) {
-            rb2d.velocity = new Vector2(rb2d.velocity.x, jumpForce);
+            rb2d.linearVelocity = new Vector2(rb2d.linearVelocity.x, jumpForce);
         }
     }
 }
